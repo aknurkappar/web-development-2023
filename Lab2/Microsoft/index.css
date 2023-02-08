@@ -1,0 +1,131 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+}
+.left-menu, .right-menu {
+    display: flex;
+    align-items: center;
+}
+p, a{
+    margin: 5px 15px 0px 15px;
+    font-family: "Roboto", sans-serif;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+ul {
+    list-style-type: none;	
+    padding: 0;
+}
+#logo {
+    height: 23px;
+}
+.container {
+    width: 1280px;
+    margin: auto;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+header ul {
+    margin: 0px 0px 10px 0px;
+}
+header ul li {
+    padding: 5px 0px;
+    font-size: 13px;
+}
+header ul li a {
+    display: block;
+}
+.down-arrow{
+    height: 20px;
+}
+.right-menu li a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-visual {
+    width: 1420px;
+    height: 500px;
+    margin: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWLAmj?ver=35aa&q=0&m=8&h=600&w=1600&b=%2523FFFFFFFF&l=f&x=0&y=0&s=1898&d=712&aim=true);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main-visual .content {
+    width: 430px;
+    margin-left: 120px;
+}
+.main-content-big-text{
+    font-weight: 600;
+    font-size: 34px;
+    color: #fff;
+}
+.main-visual p {
+    margin-bottom: 32px;
+    color: #fff;
+}
+.content button{
+    background-color: #3557dc;
+    color: #fff;;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 20px;
+    margin-left: 15px;
+    border: none;
+    height: 40px;
+}
+.cards {
+    margin: 70px;
+    margin-left: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+.card {
+    width: 300px;
+}
+.card-img {
+    width: 100%;
+}
+.cards-content-big-text{
+    font-weight: 600;
+    font-size: 30px;
+    margin: 15px 0px;
+}
+.card-content-text {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 28px; 
+}
+.card-b {
+    margin: 10px 0;
+    color: rgb(0,103,184);
+    font-weight: 600;
+}
+.box-of-links{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+}
+.card a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #53bdf1;
+    margin: 10px 0px;
+}
+.right-arrow{
+    height: 15px;
+    margin: 0px 15px 0px 5px;
+}
+
+

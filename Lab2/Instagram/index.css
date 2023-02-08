@@ -1,0 +1,130 @@
+body{
+    background-color: #fafafa;
+}
+p, a{
+    font-family: "Roboto", sans-serif;
+}
+.phoneFrame{
+    width: 450px;
+    margin-right: 15px;
+}
+.main{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px 0px 130px;
+}
+.my-form-group{
+    width: 350px;
+}
+.form-content-login{
+    border: 3px;
+    border: solid #e0e0e0;
+    background-color: #fff;
+    padding: 45px 0px 15px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.my-form-group div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-content-login input{
+    background-color:  #fafafa;
+    font-size: 12px;
+    width: 250px;
+    margin: 10px;
+    border: solid #e0e0e0;
+    border-radius: 2px;
+    padding: 10px;
+    margin: 0px 0px 5px 0px ;
+}
+.logo{
+    height: 75px;
+    margin-bottom: 25px;
+}
+.form-content-login .or-devider{
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #e0e0e0;
+}
+.form-content-login-button{
+    width: 270px;
+    height: 36px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #67b6f9;
+    border: none;
+    margin: 15px 0px 0px 0px ;
+}
+.form-content-login .or-devider p{
+    font-weight: bold;
+    font-size: 15px;
+}
+.form-content-login .or-devider hr{
+    border: none;
+    height: 1.5px;
+    background-color: #e0e0e0;
+}
+.my-form-group .login-with-facebook{
+    display: flex;
+    flex-direction: row;
+}
+.login-with-facebook img{
+    width: 30px;
+}
+.my-form-group a{
+    font-family: "Roboto", sans-serif;
+    font-weight: bold!important;
+    color: #385185;
+    text-decoration: none;
+    margin: 10px;
+}
+#form-signup{
+    font-size: 14px;
+    padding: 5px;
+}
+#form-signup a{
+    color: #67b6f9;
+}
+.my-form-group .dowdload-bar{
+    display: flex;
+    flex-direction: row;
+}
+.dowdload-bar img{
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* footer */
+.footer-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.footer-section a, p{
+    color: #b6b3b3;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: small;
+}
+.footer{
+    margin: 40px 0px 0px 0px;
+}
+.down-arrow{
+    height: 20px;
+    margin-right: 20px;
+}
+
