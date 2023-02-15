@@ -12,7 +12,7 @@ p{
     flex-direction: column;
     justify-content: center;
     width: 60%;
-    margin: 30px;
+    margin-: 30px;
 }
 .header-text{
     margin: 5px;
@@ -38,12 +38,15 @@ p{
     border-radius: 5px;
     color: aliceblue;
 }
+#list-of-tasks{
+    /* border: solid #c5c5c7; */
+    border-radius: 5px;
+}
 .item{
     display: flex;
     justify-content: space-between;
     width: 831px;
     border: #c5c5c7 solid;
-    border-radius: 5px;
     margin: 0;
     padding: 10px; 
 }
@@ -64,11 +67,4 @@ p{
 .task-item{
     list-style-type: none;
     padding: 0;
-}
-
-.title{
-    text-decoration: none;
-}
-.completed{
-    text-decoration: line-through;
 }

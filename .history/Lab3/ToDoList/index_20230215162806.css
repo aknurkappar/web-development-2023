@@ -66,9 +66,10 @@ p{
     padding: 0;
 }
 
+.completed{
+    text-decoration: line-through!important;
+}
+
 .title{
     text-decoration: none;
-}
-.completed{
-    text-decoration: line-through;
 }

@@ -38,6 +38,10 @@ p{
     border-radius: 5px;
     color: aliceblue;
 }
+#list-of-tasks{
+    /* border: solid #c5c5c7; */
+   
+}
 .item{
     display: flex;
     justify-content: space-between;
@@ -64,11 +68,4 @@ p{
 .task-item{
     list-style-type: none;
     padding: 0;
-}
-
-.title{
-    text-decoration: none;
-}
-.completed{
-    text-decoration: line-through;
 }

@@ -16,17 +16,22 @@ function addNewItem(newItem){
     inputLine.value = ""
 }
 
-listElement.addEventListener('click', (element) => {
-    if(element.target.classList.contains("trash-button"))
-    element.target.parentElement.remove()
+listElement.addEventListener('click', (e) => {
+    if(e.target.classList.contains("trash-button"))
+    e.target.parentElement.remove()
 })
 
-listElement.addEventListener('click', (element) => {
+listElement.addEventListener('click', (elemen) => {
     if(e.target.classList.contains("checkbox")){
-        if(element.target.parentElement.classList.contains("completed"))
-            element.target.parentElement.classList.remove("completed")
-        else
-            element.target.parentElement.classList.add("completed")
+        if(e.target.parentElement.classList.contains("completed")){
+            console.log("contains")
+            console.log(e.target.parentElement)
+            e.target.parentElement.classList.remove("completed")
+        } else {
+            console.log("not contains")
+            console.log(e.target.parentElement)
+            e.target.parentElement.classList.add("completed")
+        }
     }
 })
 

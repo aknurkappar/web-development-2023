@@ -17,16 +17,17 @@ function addNewItem(newItem){
 }
 
 listElement.addEventListener('click', (element) => {
-    if(element.target.classList.contains("trash-button"))
-    element.target.parentElement.remove()
+    if(e.target.classList.contains("trash-button"))
+    e.target.parentElement.remove()
 })
 
 listElement.addEventListener('click', (element) => {
     if(e.target.classList.contains("checkbox")){
-        if(element.target.parentElement.classList.contains("completed"))
+        if(element.target.parentElement.classList.contains("completed")){
             element.target.parentElement.classList.remove("completed")
-        else
+        } else {
             element.target.parentElement.classList.add("completed")
+        }
     }
 })
 

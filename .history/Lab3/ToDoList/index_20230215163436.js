@@ -27,6 +27,7 @@ listElement.addEventListener('click', (element) => {
             element.target.parentElement.classList.remove("completed")
         else
             element.target.parentElement.classList.add("completed")
+
     }
 })
 

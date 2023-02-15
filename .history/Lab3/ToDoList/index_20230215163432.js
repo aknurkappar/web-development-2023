@@ -23,10 +23,11 @@ listElement.addEventListener('click', (element) => {
 
 listElement.addEventListener('click', (element) => {
     if(e.target.classList.contains("checkbox")){
-        if(element.target.parentElement.classList.contains("completed"))
+        if(element.target.parentElement.classList.contains("completed")
             element.target.parentElement.classList.remove("completed")
         else
             element.target.parentElement.classList.add("completed")
+        }
     }
 })
 
