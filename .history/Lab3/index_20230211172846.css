@@ -1,0 +1,62 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.to-do-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    margin: 30px;
+
+    background-color: beige;
+}
+.header-text{
+    margin: 5px;
+    font-family: sans-serif;
+    font-size: 30px;
+    text-align: start;
+}
+
+.adder input{
+    margin-left: 40px;
+    width: 50em;
+    padding: 10px;
+    border: solid #c5c5c7;
+    border-radius: 5px;
+}
+
+.adder{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.adder button{
+    width: 55px;
+    background-color: rgb(88, 137, 237);
+    border: none;
+    border-radius: 5px;
+    color: aliceblue;
+}
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border: solid gray;
+}
+
+.item button{
+    background: none;
+    border: none;
+    margin: 10px;
+}
+
+.trash-button img{
+    width: 30px;
+}
+
+ul{
+    list-style-type: none;
+}

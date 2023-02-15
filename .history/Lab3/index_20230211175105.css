@@ -1,0 +1,73 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+p{
+    font-family: sans-serif;
+}
+
+.to-do-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    margin: 30px;
+}
+.header-text{
+    margin: 5px;
+    font-size: 30px;
+    text-align: start;
+}
+
+.adder input{
+    margin-left: 40px;
+    width: 25em;
+    padding: 12px;
+    border: solid #c5c5c7;
+    border-radius: 5px;
+}
+
+.adder{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0px;
+}
+
+.adder button{
+    width: 55px;
+    background-color: rgb(88, 137, 237);
+    border: none;
+    border-radius: 5px;
+    color: aliceblue;
+}
+.list{
+    border: solid #c5c5c7;
+    border-radius: 5px;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    width: 831px;
+    border-bottom: #c5c5c7 solid;
+    margin: 0;
+    padding: 10px; 
+}
+.item button{
+    background: none;
+    border: none;
+    margin: 15px;
+}
+
+.item input{
+    margin: 0px 20px;
+}
+
+.trash-button img{
+    width: 20px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
