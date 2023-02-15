@@ -1,6 +1,4 @@
 let listElement = document.getElementById("list-of-tasks")
-let inputLine = document.getElementById("myInput")
-let addButton = document.querySelector("button")
 let itemArrayList = []
 
 function addNewItem(thisInputValue){
@@ -13,7 +11,7 @@ function addNewItem(thisInputValue){
         </div>
         <br>
     </div>`
-    itemArrayList.push(thisInputValue)
+    itemArrayList.push(inputValue)
     listElement.innerHTML += newItemElement;
     inputLine.value = ""
 }
@@ -24,7 +22,7 @@ listElement.addEventListener('click', (element) => {
 })
 
 listElement.addEventListener('click', (element) => {
-    if(element.target.classList.contains("checkbox")){
+    if(e.target.classList.contains("checkbox")){
         if(element.target.parentElement.classList.contains("completed"))
             element.target.parentElement.classList.remove("completed")
         else
@@ -32,6 +30,8 @@ listElement.addEventListener('click', (element) => {
     }
 })
 
+let inputLine = document.getElementById("myInput")
+let addButton = document.querySelector("button")
 
 addButton.addEventListener('click', () =>{
     inputValue = inputLine.value
