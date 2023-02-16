@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = +prompt("The first number?", "");
+let b = +prompt("The second number?", "");
+alert( a + b );
+
+// TASK 2
+alert( 1.35.toFixed(1) ); // 1.4
+alert( 6.35.toFixed(1) ); // 6.3
+
+// TASK 3
+function readNumber() {
+    let num;
+    do {
+        num = prompt("Enter a number please?", 0);
+    } while ( !isFinite(num) );
+    if (num === null || num === '') return null;
+    return +num;
+}  
+alert(`Read: ${readNumber()}`);
+
+    </script>
+</body>
+</html>
