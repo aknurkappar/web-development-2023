@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        if (-1 || 0) alert( 'first' );
+        // -1 OR 0 is true. So, alert will execute
+        if (-1 && 0) alert( 'second' );
+        // -1 is true, 0 is false. Result of AND operation is false. So, alert won't execute
+        if (null || -1 && 1) alert( 'third' );
+        // this OR operation returnes true. So, alert will execute
+
+
+    </script>
+</body>
+</html>
