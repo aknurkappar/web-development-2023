@@ -3,12 +3,14 @@
 }
 .nav-bar{
   background-color: #3566a8;
-  color: aliceblue;
-  font-size: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0px 50px;
+}
+.nav-bar p{
+  color: aliceblue;
+  font-size: 40px;
 }
 
 .checkout-button{
@@ -27,7 +29,35 @@
   align-items: center;
 }
 
+.products-list{
+  margin: 20px;
+}
 .products-list .header{
   font-size: 30px;
   color: #92999b;
+}
+.product-item{
+  margin-bottom: 30px;
+}
+
+.product-item a{
+  color: #3566a8;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.product-item p{
+  font-size: 10px;
+  color: #757575;
+}
+
+.product-item button{
+  background-color: #3566a8;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  padding: 12px;
+  color: aliceblue;
+
 }
