@@ -51,12 +51,55 @@
   margin: 15px;
 }
 
-.product-button{
-  background-color: #3566a8;
-  border: none;
+.product-footer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.product-price{
+  width: 90px;
+  height: 30px;
+  color: #3566a8;
+  font-weight: 700;
+  border: #3566a8 solid;
   border-radius: 5px;
-  height: 40px;
-  padding: 12px;
-  color: aliceblue;
-  width: 85px
+  text-align: center;
+  padding-top: 8px;
+  margin: 10px;
+}
+.product-buttons-box{
+  height: auto;
+  width: 160px;
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.product-buttons-box p{
+  color: #3566a8;
+}
+
+.product-button-whatsapp{
+  background-image: url("https://cdn-icons-png.flaticon.com/512/124/124034.png?w=360");
+}
+.product-button-telegram{
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png");
+}
+.product-button-whatsapp, .product-button-telegram{
+  border: none;
+  border-radius: 15px;
+  margin-left: 15px;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  width: 30px;
+  height: 30px;
+}
+
+.line{
+  margin: 25px 0px;
+  height: 1px;
+  width: 100%;
+  background-color: #3566a8;
 }

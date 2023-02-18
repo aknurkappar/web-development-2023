@@ -76,9 +76,11 @@ export class AppProductListComponent{
       images : ["t-wolf-tf-800-1.jpeg"]},
   ]
 
-  share(link : String){
+  shareViaWhatsApp(link : String){
     window.open("https://web.whatsapp.com/send?text=" + link, "_blank");
-    // window.location.href = "https://web.whatsapp.com/send?text=" + link
+  }
+  shareViaTelegram(link : String){
+    window.open("https://telegram.me/share/url?url=" + link, "_blank");
   }
 
   onNotify() {
