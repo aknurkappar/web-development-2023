@@ -1,28 +1,6 @@
 <div class="app">
+  <app-top-bar> </app-top-bar>
+  <app-product-list></app-product-list>
 
-  <div class="nav-bar">
-    <p>{{storeName}}</p>
-    <button class="checkout-button">Checkout</button>
-  </div>
-
-  <div class="products-list">
-    <p class="header">Products</p>
-
-    <div *ngFor="let product of products" class="product-item">
-      <p>
-        <a [title]="product.name + ' details'" href="#">
-          {{product.name}}
-        </a>
-      </p>
-      <p *ngIf="product.description">
-        Description: {{ product.description }}
-      </p>
-
-      <button type="button" (click)="share()" >
-        Share
-      </button>
-    </div>
-
-  </div>
 
 </div>

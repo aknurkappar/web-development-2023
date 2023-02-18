@@ -1,0 +1,33 @@
+
+.products-list{
+  margin: 20px;
+}
+.products-list .header{
+  font-size: 30px;
+  color: #92999b;
+}
+.product-item{
+  margin-bottom: 30px;
+}
+
+.product-item a{
+  color: #3566a8;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.product-item p{
+  font-size: 10px;
+  color: #757575;
+}
+
+.product-item button{
+  background-color: #3566a8;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  padding: 12px;
+  color: aliceblue;
+
+}
