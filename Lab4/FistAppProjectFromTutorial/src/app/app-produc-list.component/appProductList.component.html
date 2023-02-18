@@ -17,10 +17,10 @@
           <li *ngFor="let descriptionItem of product.description">{{descriptionItem }}</li>
         </ul>
 
-        <button type="button" (click)="share()" class="product-button"> Share </button>
-
         <app-product-alerts [product]="product"
                             (notify)="onNotify()"> </app-product-alerts>
+
+        <button type="button" (click)="share(product.link)" class="product-button"> Share </button>
       </div>
 
 </div>
