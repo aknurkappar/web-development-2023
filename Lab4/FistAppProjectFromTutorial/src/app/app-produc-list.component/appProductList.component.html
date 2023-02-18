@@ -3,14 +3,19 @@
 
       <div *ngFor="let product of products" class="product-item">
 
-        <p>
-          <a [title]="product.name + ' details'" href="#">
-            {{product.name}}
-          </a>
-        </p>
-        <p *ngIf="product.description">
-          Description: {{ product.description }}
-        </p>
+        <a href="{{product.link}}" [title]="product.name + ' details'">
+         {{product.name}}
+          <img src="./assets/link-icon.png">
+        </a>
+
+        <div class="product-images">
+            <img *ngFor="let image of product.images" src="../../assets/products/{{image}}"/>
+        </div>
+
+        <ul>
+          Описание:
+          <li *ngFor="let descriptionItem of product.description">{{descriptionItem }}</li>
+        </ul>
 
         <button type="button" (click)="share()" class="product-button"> Share </button>
 
