@@ -2,6 +2,7 @@
   <p class="header">Products</p>
 
       <div *ngFor="let product of products" class="product-item">
+
         <p>
           <a [title]="product.name + ' details'" href="#">
             {{product.name}}
@@ -11,8 +12,10 @@
           Description: {{ product.description }}
         </p>
 
-        <button type="button" (click)="share()" >
-          Share
-        </button>
+        <button type="button" (click)="share()" class="product-button"> Share </button>
+
+        <app-product-alerts [product]="product"
+                            (notify)="onNotify()"> </app-product-alerts>
       </div>
+
 </div>

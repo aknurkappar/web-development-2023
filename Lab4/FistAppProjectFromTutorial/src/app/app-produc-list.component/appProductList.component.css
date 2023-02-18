@@ -1,4 +1,3 @@
-
 .products-list{
   margin: 20px;
 }
@@ -18,16 +17,15 @@
 }
 
 .product-item p{
-  font-size: 10px;
+  font-size: 13px;
   color: #757575;
 }
 
-.product-item button{
+.product-button{
   background-color: #3566a8;
   border: none;
   border-radius: 5px;
   height: 40px;
   padding: 12px;
   color: aliceblue;
-
 }
