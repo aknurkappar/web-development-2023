@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 export interface Product{
   name : String,
@@ -8,6 +8,7 @@ export interface Product{
   link : String,
   images : String[]
 }
+
 @Component({
   selector: 'app-product-list',
   templateUrl: './appProductList.component.html',
@@ -57,7 +58,7 @@ export class AppProductListComponent{
 
     {name: "Наушники Logitech 981-001050 черный",
       description: ["тип: гарнитура", "вид: накладные", "подключение: беспроводное", "тип акустического оформления: закрытые", "тип крепления: оголовье",
-      "система активного шумоподавления: Нет", "микрофон: Да"],
+        "система активного шумоподавления: Нет", "микрофон: Да"],
       price : 39990 , rating : 5,
       link : "https://kaspi.kz/shop/p/logitech-981-001050-chernyi-104516664/?c=750000000#!/item",
       images : ["logitech-981-001050-cernyj-1.jpeg", "logitech-981-001050-cernyj-2.jpeg", "logitech-981-001050-cernyj-3.jpeg"]},
@@ -78,13 +79,12 @@ export class AppProductListComponent{
 
   shareViaWhatsApp(link : String){
     window.open("https://web.whatsapp.com/send?text=" + link, "_blank");
+    console.log(this.products)
   }
   shareViaTelegram(link : String){
     window.open("https://telegram.me/share/url?url=" + link, "_blank");
   }
-
   onNotify() {
     window.alert('You will be notified when the product goes on sale');
   }
-
 }
