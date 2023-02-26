@@ -1,0 +1,10 @@
+.product-button{
+  background-color: #3566a8;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  padding: 12px;
+  color: aliceblue;
+  width: 85px;
+  margin: 10px;
+}

@@ -1,0 +1,105 @@
+.products-list{
+  margin: 20px;
+}
+.products-list .header{
+  font-size: 30px;
+  color: #92999b;
+}
+.product-item{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.product-item a{
+  color: #3566a8;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+.product-item a img{
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+}
+
+.product-item ul{
+  font-size: 18px;
+  color: #757575;
+}
+
+.product-item ul li{
+  margin: 7px;
+  font-size: 15px;
+  color: #757575;
+}
+
+.product-images{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.product-images img{
+  width: auto;
+  height: auto;
+  max-width: 130px;
+  max-height: 130px;
+  margin: 15px;
+}
+
+.product-footer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.product-price{
+  width: 90px;
+  height: 30px;
+  color: #3566a8;
+  font-weight: 700;
+  border: #3566a8 solid;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 8px;
+  margin: 10px;
+}
+.product-buttons-box{
+  height: auto;
+  width: 160px;
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.product-buttons-box p{
+  color: #3566a8;
+}
+
+.product-button-whatsapp{
+  background-image: url("https://cdn-icons-png.flaticon.com/512/124/124034.png?w=360");
+}
+.product-button-telegram{
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png");
+}
+.product-button-whatsapp, .product-button-telegram{
+  border: none;
+  border-radius: 15px;
+  margin-left: 15px;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  width: 30px;
+  height: 30px;
+}
+
+.line{
+  margin: 25px 0px;
+  height: 1px;
+  width: 100%;
+  background-color: #3566a8;
+}
