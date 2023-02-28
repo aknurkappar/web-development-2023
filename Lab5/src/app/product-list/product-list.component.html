@@ -1,0 +1,8 @@
+<div class="products-list">
+  <p class="header">Products</p>
+
+  <div *ngFor="let product of products" class="product-item">
+    <app-product-item [product] = "product"></app-product-item>
+  </div>
+
+</div>

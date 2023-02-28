@@ -1,0 +1,27 @@
+<a href="{{product.link}}" [title]="product.name + ' details'">
+  {{product.name}}
+  <img src="../../assets/link-icon.png">
+</a>
+
+<div class="product-images">
+  <img *ngFor="let image of product.images" src="../../assets/products/{{image}}"/>
+</div>
+
+<ul>
+  Описание:
+  <li *ngFor="let descriptionItem of product.description">{{descriptionItem }}</li>
+</ul>
+
+<div class="product-footer">
+  <div class="product-price">{{product.price}}₸</div>
+  <div class="product-buttons-box">
+    <p>Share via</p>
+    <button type="button" (click)="shareViaWhatsApp(product.link)" class="product-button-whatsapp"></button>
+    <button type="button" (click)="shareViaTelegram(product.link)" class="product-button-telegram"></button>
+  </div>
+
+  <app-product-alerts [product]="product"
+                      (notify)="onNotify()"> </app-product-alerts>
+</div>
+
+<div class="line"></div>
