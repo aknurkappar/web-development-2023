@@ -64,7 +64,7 @@ export class ProductListComponent implements OnInit{
       price: 10820, rating: 5,
       link: "https://kaspi.kz/shop/p/realme-buds-t100-chernyi-107357596/?c=750000000#!/item",
       images: ["realme-buds-t100-1.jpeg", "realme-buds-t100-2.jpeg", "realme-buds-t100-3.jpeg"]
-      ,      category : new Category("Keyboards")
+      ,      category : new Category("Headphones")
     },
 
     {
@@ -74,7 +74,7 @@ export class ProductListComponent implements OnInit{
       price: 39990, rating: 5,
       link: "https://kaspi.kz/shop/p/logitech-981-001050-chernyi-104516664/?c=750000000#!/item",
       images: ["logitech-981-001050-cernyj-1.jpeg", "logitech-981-001050-cernyj-2.jpeg", "logitech-981-001050-cernyj-3.jpeg"]
-      ,     category : new Category("Keyboards")
+      ,     category : new Category("Headphones")
     },
 
     {
@@ -84,7 +84,7 @@ export class ProductListComponent implements OnInit{
       price: 114195, rating: 5,
       link: "https://kaspi.kz/shop/p/marshall-major-iv-chernyi-102138144/?c=750000000#!/item",
       images: ["marshall-major-iv-1.jpeg", "marshall-major-iv-2.jpeg", "marshall-major-iv-3.jpeg"]
-      ,      category : new Category("Keyboards")
+      ,      category : new Category("Headphones")
     },
 
     {
@@ -96,6 +96,5 @@ export class ProductListComponent implements OnInit{
       ,     category : new Category("Keyboards")
     },
   ]
-
   ngOnInit(): void {}
 }

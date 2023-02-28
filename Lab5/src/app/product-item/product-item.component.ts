@@ -17,6 +17,5 @@ export class ProductItemComponent implements OnInit{
   onNotify() {
     window.alert('You will be notified when the product goes on sale');
   }
-
   ngOnInit(): void {}
 }

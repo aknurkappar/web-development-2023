@@ -10,10 +10,12 @@ export class CategoriesComponent implements OnInit{
   categories : Category[];
   selectedCategory: Category;
   constructor() {
-    this.categories = [new Category("All"),
+    this.categories = [
+      new Category("All"),
       new Category("Mouses"),
       new Category("Keyboards"),
-      new Category("Headphones")]
+      new Category("Headphones")
+    ]
     this.categories[0].isActive = true
     this.selectedCategory = this.categories.filter(category => category.isActive)[0]
   }
@@ -22,6 +24,11 @@ export class CategoriesComponent implements OnInit{
     var index = this.categories.indexOf(category);
     this.categories.map(category => category.isActive = false)
     this.categories[index].isActive = !this.categories[index].isActive;
+    this.selectedCategory = this.categories[index]
+  }
+
+  isSelected(){
+    return false
   }
   ngOnInit(): void {}
 }
