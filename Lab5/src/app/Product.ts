@@ -1,4 +1,5 @@
-// @ts-ignore
+import {Category} from "./Category";
+
 export class Product{
   name : String;
   description : String[];
@@ -6,7 +7,7 @@ export class Product{
   rating : number;
   link : String;
   images : String[];
-  category : String;
+  category : Category;
 
   constructor(name : String,
               description : String[],
@@ -14,7 +15,7 @@ export class Product{
               rating : number,
               link : String,
               images : String[],
-              category : String) {
+              category : Category) {
     this.name = name;
     this.description = description;
     this.price = price;

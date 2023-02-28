@@ -1,8 +1,10 @@
 <div class="category">
-  <button *ngFor="let category of categories" class="category-button">
-    {{category}}
+  <button *ngFor="let category of categories"
+  (click)="showProducts(category)" class="category-button"
+          [ngClass]="{'selected' : category.isActive, 'not-selected' : !category.isActive}">
+    {{category.name}}
   </button>
 </div>
 
 
-<app-product-list></app-product-list>
+<app-product-list [selectedCategory]="selectedCategory"></app-product-list>
