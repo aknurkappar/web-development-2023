@@ -1,6 +1,4 @@
 <div>
-  <p>{{product.id}}</p>
-
 <a class="link-icon" href="{{product.link}}" [title]="product.name + ' details'">
   {{product.name}}
   <img src="../../assets/link-icon.png" arc="link-icon">
@@ -16,6 +14,9 @@
 </ul>
 
 <div class="product-footer">
+  <p class="like-text">{{product.like.counter}}</p>
+<!--  <p class="like-text" [ngClass]="{'product-button-liked' : product.like.isLiked, 'product-button-not-liked' : !product.like.isLiked }">{{product.like.isLiked}}</p>-->
+  <button type="button" (click)="product.like.setLike()" [ngClass]="{'product-button-liked' : product.like.isLiked, 'product-button-not-liked' : !product.like.isLiked }"class="product-button-like"></button>
   <div class="product-price">{{product.price}}₸</div>
   <div class="product-buttons-box">
     <p>Share via</p>
@@ -25,7 +26,6 @@
 
   <app-product-alerts [product]="product"
                       (notify)="onNotify()"> </app-product-alerts>
-  <button type="button" (click)="product.like = product.like + 1" class="product-button-like"></button>
   <button type="button" (click)="deleteProduct(product)" class="product-button-trash"></button>
 </div>
 

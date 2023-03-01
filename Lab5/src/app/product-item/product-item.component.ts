@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
 import {Product} from "../Product";
 
 @Component({
@@ -19,7 +19,8 @@ export class ProductItemComponent implements OnInit{
     window.alert('You will be notified when the product goes on sale');
   }
   deleteProduct(product : Product) {
-    this.products = this.products.filter(tempProduct => product.id != tempProduct.id)
+    var index = this.products.indexOf(product)
+    delete this.products[index]
   }
   ngOnInit(): void {}
 }

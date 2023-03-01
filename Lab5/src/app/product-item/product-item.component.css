@@ -79,15 +79,20 @@ img{
 .product-button-telegram{
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png");
 }
-.product-button-whatsapp, .product-button-telegram{
+.product-button-whatsapp, .product-button-telegram, .product-button-liked, .product-button-not-liked, .product-button-trash{
   border: none;
-  border-radius: 15px;
   margin-left: 15px;
   padding: 0;
   background-repeat: no-repeat;
   background-size: 30px 30px;
   width: 30px;
   height: 30px;
+  background-color: white;
+}
+
+.product-button-whatsapp, .product-button-telegram{
+  border-radius: 15px;
+  padding: 0;
 }
 
 .line{
@@ -96,9 +101,17 @@ img{
   width: 100%;
   background-color: #3566a8;
 }
-.product-button-like{
+.product-button-liked{
+  background-image: url("https://cdn-icons-png.flaticon.com/512/1076/1076984.png");
+}
+.product-button-not-liked{
+  background-image: url("https://cdn-icons-png.flaticon.com/512/1077/1077035.png");
 }
 
 .product-button-trash{
-  
+  background-image: url("https://cdn-icons-png.flaticon.com/512/3405/3405244.png");
+}
+.like-text{
+  width: 20px;
+  text-align: center;
 }
