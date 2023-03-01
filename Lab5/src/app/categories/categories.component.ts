@@ -7,8 +7,8 @@ import {Category} from "../Category";
   styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent implements OnInit{
-  categories : Category[];
   selectedCategory: Category;
+  categories : Category[] = []
   constructor() {
     this.categories = [
       new Category("All"),

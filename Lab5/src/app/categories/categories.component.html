@@ -6,4 +6,6 @@
   </button>
 </div>
 
+<p *ngIf="selectedCategory.name.length === 0" class="list-header-text">Please, select one of the categories</p>
+
 <app-product-list [selectedCategory]="selectedCategory" [categories] = "categories"></app-product-list>
