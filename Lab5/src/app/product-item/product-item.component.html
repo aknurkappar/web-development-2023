@@ -15,7 +15,6 @@
 
 <div class="product-footer">
   <p class="like-text">{{product.like.counter}}</p>
-<!--  <p class="like-text" [ngClass]="{'product-button-liked' : product.like.isLiked, 'product-button-not-liked' : !product.like.isLiked }">{{product.like.isLiked}}</p>-->
   <button type="button" (click)="product.like.setLike()" [ngClass]="{'product-button-liked' : product.like.isLiked, 'product-button-not-liked' : !product.like.isLiked }"class="product-button-like"></button>
   <div class="product-price">{{product.price}}₸</div>
   <div class="product-buttons-box">
