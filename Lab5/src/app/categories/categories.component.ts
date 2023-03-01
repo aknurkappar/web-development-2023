@@ -15,6 +15,7 @@ export class CategoriesComponent implements OnInit{
       new Category("Mouses"),
       new Category("Keyboards"),
       new Category("Headphones"),
+      new Category("Laptops")
     ]
     this.selectedCategory = new Category("")
   }
