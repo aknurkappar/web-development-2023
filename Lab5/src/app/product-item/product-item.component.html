@@ -1,4 +1,5 @@
 <div>
+  <p>{{product.id}}</p>
 
 <a class="link-icon" href="{{product.link}}" [title]="product.name + ' details'">
   {{product.name}}
@@ -24,7 +25,10 @@
 
   <app-product-alerts [product]="product"
                       (notify)="onNotify()"> </app-product-alerts>
+  <button type="button" (click)="product.like = product.like + 1" class="product-button-like"></button>
+  <button type="button" (click)="deleteProduct(product)" class="product-button-trash"></button>
 </div>
+
 
 <div class="line"></div>
 

@@ -14,21 +14,16 @@ export class CategoriesComponent implements OnInit{
       new Category("All"),
       new Category("Mouses"),
       new Category("Keyboards"),
-      new Category("Headphones")
+      new Category("Headphones"),
     ]
-    this.categories[0].isActive = true
-    this.selectedCategory = this.categories.filter(category => category.isActive)[0]
+    this.selectedCategory = new Category("")
   }
 
   showProducts(category : Category){
     var index = this.categories.indexOf(category);
-    this.categories.map(category => category.isActive = false)
-    this.categories[index].isActive = !this.categories[index].isActive;
+    this.categories.forEach(category => category.isActive = false)
+    this.categories[index].isActive = true;
     this.selectedCategory = this.categories[index]
-  }
-
-  isSelected(){
-    return false
   }
   ngOnInit(): void {}
 }

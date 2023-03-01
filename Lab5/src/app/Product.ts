@@ -1,6 +1,8 @@
 import {Category} from "./Category";
 
 export class Product{
+  static idCounter : number = 0;
+  id : number;
   name : String;
   description : String[];
   price: number;
@@ -8,6 +10,7 @@ export class Product{
   link : String;
   images : String[];
   category : Category;
+  like : number;
 
   constructor(name : String,
               description : String[],
@@ -16,6 +19,7 @@ export class Product{
               link : String,
               images : String[],
               category : Category) {
+    this.id = Product.idCounter + 1;
     this.name = name;
     this.description = description;
     this.price = price;
@@ -23,5 +27,7 @@ export class Product{
     this.link = link;
     this.images = images;
     this.category = category
+    this.like = 0
+    Product.idCounter = Product.idCounter + 1
   }
 }

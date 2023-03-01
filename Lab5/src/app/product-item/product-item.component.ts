@@ -8,6 +8,7 @@ import {Product} from "../Product";
 })
 export class ProductItemComponent implements OnInit{
   @Input() declare product : Product
+  @Input() declare products : Product[]
   shareViaWhatsApp(link : String){
     window.open("https://web.whatsapp.com/send?text=" + link, "_blank");
   }
@@ -16,6 +17,9 @@ export class ProductItemComponent implements OnInit{
   }
   onNotify() {
     window.alert('You will be notified when the product goes on sale');
+  }
+  deleteProduct(product : Product) {
+    this.products = this.products.filter(tempProduct => product.id != tempProduct.id)
   }
   ngOnInit(): void {}
 }

@@ -2,7 +2,7 @@
   <p class="header">Products</p>
 
   <div *ngFor="let product of products" class="product-item">
-    <app-product-item *ngIf="selectedCategory.name === product.category.name" [product] = "product"></app-product-item>
+    <app-product-item *ngIf="selectedCategory.name === product.category.name || selectedCategory.name === 'All'" [product] = "product" [products] = "products"></app-product-item>
   </div>
 <!--  || selectedCategory.name === 'All'-->
 </div>
