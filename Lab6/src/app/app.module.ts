@@ -9,6 +9,7 @@ import { AlbumDetailsComponent } from './album-details/album-details.component';
 import { AlbumPhotosComponent } from './album-photos/album-photos.component';
 import {RouterOutlet} from "@angular/router";
 import { AppRoutingModule } from './app-routing.module';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AppRoutingModule } from './app-routing.module';
     HomeComponent,
     AboutComponent,
     AlbumDetailsComponent,
-    AlbumPhotosComponent
+    AlbumPhotosComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

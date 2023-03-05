@@ -1,1 +1,13 @@
-<p>albums works!</p>
+<p>album list</p>
+
+<ul>
+  <li *ngFor="let album of albums">
+    <a routerLink="/albums/{{album.id}}">
+      <p>{{album.userId}}</p>
+      <p>{{album.id}}</p>
+      <p>{{album.title}}</p>
+    </a>
+
+  </li>
+</ul>
+
