@@ -10,7 +10,6 @@ import {ALBUMS} from "../albums-database";
 export class AlbumsComponent implements OnInit{
 
   albums: Album[];
-
   constructor() {
     this.albums = [];
   }
@@ -19,6 +18,8 @@ export class AlbumsComponent implements OnInit{
     this.albums = ALBUMS;
 
   }
-
+  removeAlbum(album : Album){
+    delete this.albums[this.albums.indexOf(album)]
+  }
 
 }

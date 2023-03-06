@@ -10,6 +10,7 @@ import { AlbumPhotosComponent } from './album-photos/album-photos.component';
 import {RouterOutlet} from "@angular/router";
 import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -21,11 +22,12 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AlbumPhotosComponent,
     NotFoundComponent
   ],
-  imports: [
-    BrowserModule,
-    RouterOutlet,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        RouterOutlet,
+        AppRoutingModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent,
     AlbumsComponent,

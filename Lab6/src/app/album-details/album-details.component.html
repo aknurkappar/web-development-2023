@@ -1,4 +1,19 @@
 
-<div *ngIf="album">
-  <p>{{album.title}} {{album.id}}</p>
+<div *ngIf="album" >
+  <button class="album-details-return-back">Back</button>
+  <p>Album details:</p>
+  <div class="album-details-content">
+    <p>Title: {{album.title}}</p>
+    <p>Album's id: {{album.id}}</p>
+    <p>User id: {{album.userId}}</p>
+  </div>
+
+  <div class="album-details-change-title-form">
+    <input type="text" name="newTitle" placeholder="Title" [(ngModel)]="newTitle" />
+    <button type="submit" (click)="saveChanges()">Save</button>
+  </div>
+</div>
+
+<div *ngIf="!album">
+  <app-not-found></app-not-found>
 </div>

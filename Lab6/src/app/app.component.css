@@ -1,0 +1,24 @@
+.header{
+  font-weight: 700;
+  border-bottom: solid 0.5px;
+  font-size: larger;
+}
+
+.header ul{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 60px;
+  margin: 0;
+}
+
+.header ul li{
+  margin-right: 30px;
+  list-style-type: none;
+}
+.header ul li a{
+  text-decoration: none;
+}
+.header ul li a:visited{
+  color: #344a52;
+}

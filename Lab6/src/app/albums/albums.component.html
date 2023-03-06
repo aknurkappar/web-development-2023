@@ -1,13 +1,15 @@
-<p>album list</p>
+<p class="list-header">Album list:</p>
 
-<ul>
+<ul class="album-list">
   <li *ngFor="let album of albums">
-    <a routerLink="/albums/{{album.id}}">
-      <p>{{album.userId}}</p>
-      <p>{{album.id}}</p>
-      <p>{{album.title}}</p>
-    </a>
-
+    <div *ngIf="album">
+      <a routerLink="/albums/{{album.id}}">
+<!--        <p>{{album.userId}}</p>-->
+<!--        <p>{{album.id}}</p>-->
+        <p>{{album.title}}</p>
+      </a>
+      <img src="./assets/trash.png" class="trash-button" (click)="removeAlbum(album)"/>
+    </div>
   </li>
 </ul>
 

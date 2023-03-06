@@ -1,0 +1,35 @@
+
+
+.album-details-content, .album-details-change-title-form{
+  margin-left: 30px;
+  font-weight: bold;
+}
+
+.album-details-change-title-form{
+  display: flex;
+  align-items: center;
+}
+
+.album-details-change-title-form input, .album-details-change-title-form button, .album-details-return-back{
+  border: none;
+  border-radius: 3px;
+}
+
+.album-details-change-title-form input{
+  height: 25px;
+  width: 215px;
+  margin-right: 20px;
+  background-color: #e6eff1;
+  padding: 5px;
+}
+
+.album-details-change-title-form button, .album-details-return-back{
+  padding: 10px;
+  background-color: #344a52;
+  color: white;
+}
+
+.album-details-return-back{
+  margin: 15px 0px;
+}
+

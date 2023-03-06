@@ -10,14 +10,22 @@ import {Album} from "../Album";
 })
 export class AlbumDetailsComponent implements OnInit{
   album : Album;
+  newTitle : String = "";
 
   constructor(private route : ActivatedRoute) { // injectable classes - ActivatedRoute
     this.album = {} as Album;
   }
 
+  saveChanges(){
+    this.album.title = this.newTitle
+  }
+
   ngOnInit() {
-    const id = Number(this.route.snapshot.paramMap.get("id"))
-    this.album = ALBUMS.find(album => album.id === id) as Album;
+    this.route.paramMap.subscribe(params => { //
+      const id = Number(params.get("id"))
+      this.album = ALBUMS.find(album => album.id === id) as Album;
+    })
+
   }
 
 }
