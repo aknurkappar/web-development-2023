@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {Route, RouterModule, Routes} from "@angular/router";
+import {RouterModule, Routes} from "@angular/router";
 import {HomeComponent} from "./home/home.component";
 import {AboutComponent} from "./about/about.component";
 import {AlbumsComponent} from "./albums/albums.component";
@@ -14,7 +13,7 @@ const routes : Routes = [
   {path: "about", component: AboutComponent},
   {path: "albums", component: AlbumsComponent},
   {path: "albums/:id", component: AlbumDetailsComponent},
-  {path: "photos", component: AlbumPhotosComponent},
+  {path: "albums/:id/photos", component: AlbumPhotosComponent},
   {path: "", redirectTo: "home", pathMatch:  "full"},
   {path: "**", component: NotFoundComponent}
 ]

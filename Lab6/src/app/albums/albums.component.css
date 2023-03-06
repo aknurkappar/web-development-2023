@@ -31,4 +31,6 @@
   text-decoration: none;
 }
 
-
+.album-list li div a:hover {
+  color: darkslateblue;
+}

@@ -22,3 +22,8 @@
 .header ul li a:visited{
   color: #344a52;
 }
+
+.header ul li a:hover{
+  color: darkslateblue;
+}
+

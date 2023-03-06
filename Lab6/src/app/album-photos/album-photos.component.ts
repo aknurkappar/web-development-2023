@@ -11,6 +11,7 @@ import {AlbumService} from "../album.service";
 export class AlbumPhotosComponent implements OnInit{
 
   photos : Photo[];
+  loading : boolean = false;
 
   constructor(private route : ActivatedRoute, private albumService : AlbumService) { // injectable classes - ActivatedRoute
     this.photos = {} as Photo[];
@@ -21,9 +22,13 @@ export class AlbumPhotosComponent implements OnInit{
   }
 
   getPhotos(){
-    this.route.paramMap.subscribe(params => { //
+    this.route.paramMap.subscribe(params => {
+      this.loading = true;
       const id = Number(params.get("id"))
-      this.albumService.getPhotos(id).subscribe(photos => this.photos = photos)
+      this.albumService.getPhotos(id).subscribe(photos => {
+        this.photos = photos;
+        this.loading = false;
+      })
     })
   }
 }

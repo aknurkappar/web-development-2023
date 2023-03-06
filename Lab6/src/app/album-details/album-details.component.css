@@ -1,7 +1,6 @@
-
-
 .album-details-content, .album-details-change-title-form{
   margin-left: 30px;
+  margin-bottom: 30px;
   font-weight: bold;
 }
 
@@ -33,3 +32,11 @@
   margin: 15px 0px;
 }
 
+.album-details-photos-list{
+  text-decoration: none;
+  color: #344a52;
+}
+
+.album-details-photos-list:hover{
+  color: darkslateblue;
+}

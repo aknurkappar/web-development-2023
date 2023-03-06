@@ -1,0 +1,19 @@
+.album-details-photo div{
+  display: flex;
+}
+.album-details-photo div img{
+  margin: 15px;
+  margin-left: 0px;
+}
+.album-details-photo div p{
+  margin-top: 20px;
+  width: 450px;
+}
+.album-details-return-back{
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  background-color: #344a52;
+  color: white;
+  margin: 15px 0px;
+}

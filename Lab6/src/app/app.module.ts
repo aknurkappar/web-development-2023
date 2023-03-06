@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {HttpClientModule} from "@angular/common/http";
     AboutComponent,
     AlbumDetailsComponent,
     AlbumPhotosComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LoadingComponent
   ],
     imports: [
         BrowserModule,

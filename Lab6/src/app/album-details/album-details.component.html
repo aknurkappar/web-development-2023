@@ -4,22 +4,13 @@
   <p>Album details:</p>
   <div class="album-details-content">
     <p>Title: {{album.title}}</p>
-    <p>Album's id: {{album.id}}</p>
-    <p>User id: {{album.userId}}</p>
+    <a class="album-details-photos-list" routerLink="/albums/{{album.id}}/photos">See photos -></a>
   </div>
 
   <div class="album-details-change-title-form">
     <input type="text" name="newTitle" placeholder="Title" [(ngModel)]="newTitle" />
-    <button type="submit" (click)="saveChanges()">Save</button>
+    <button type="submit" (click)="updateAlbum()">Save</button>
   </div>
-
-<!--  <div>-->
-<!--    <p *ngFor="let photo of photos"> {{photo.title}}</p>-->
-<!--  </div>-->
-
-  <button routerLink="/albums/{{album.id}}/photos"></button>
 </div>
 
-<div *ngIf="!album">
-  <app-not-found></app-not-found>
-</div>
+<app-loading *ngIf="loading"></app-loading>
