@@ -11,6 +11,7 @@ import {RouterOutlet} from "@angular/router";
 import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {FormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {FormsModule} from "@angular/forms";
         BrowserModule,
         RouterOutlet,
         AppRoutingModule,
-        FormsModule
+        FormsModule,
+        HttpClientModule
     ],
   providers: [],
   bootstrap: [AppComponent,

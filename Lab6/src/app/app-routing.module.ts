@@ -6,6 +6,7 @@ import {AboutComponent} from "./about/about.component";
 import {AlbumsComponent} from "./albums/albums.component";
 import {NotFoundComponent} from "./not-found/not-found.component";
 import {AlbumDetailsComponent} from "./album-details/album-details.component";
+import {AlbumPhotosComponent} from "./album-photos/album-photos.component";
 
 
 const routes : Routes = [
@@ -13,6 +14,7 @@ const routes : Routes = [
   {path: "about", component: AboutComponent},
   {path: "albums", component: AlbumsComponent},
   {path: "albums/:id", component: AlbumDetailsComponent},
+  {path: "photos", component: AlbumPhotosComponent},
   {path: "", redirectTo: "home", pathMatch:  "full"},
   {path: "**", component: NotFoundComponent}
 ]

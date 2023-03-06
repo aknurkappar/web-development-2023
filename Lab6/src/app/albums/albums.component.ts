@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Album} from "../Album";
-import {ALBUMS} from "../albums-database";
+import {AlbumService} from "../album.service";
 
 @Component({
   selector: 'app-albums',
@@ -10,16 +10,14 @@ import {ALBUMS} from "../albums-database";
 export class AlbumsComponent implements OnInit{
 
   albums: Album[];
-  constructor() {
+  constructor(private albumService : AlbumService ) {
     this.albums = [];
   }
 
   ngOnInit() : void{
-    this.albums = ALBUMS;
-
+   this.albumService.getAlbums().subscribe(albums => this.albums = albums )
   }
   removeAlbum(album : Album){
     delete this.albums[this.albums.indexOf(album)]
   }
-
 }
