@@ -1,7 +1,8 @@
 <app-loading *ngIf="loading"></app-loading>
 
+<button class="album-details-return-back" routerLink="/albums/{{photos[0].albumId}}">Back</button>
+
 <div *ngFor="let photo of photos" class="album-details-photo">
-  <button class="album-details-return-back" routerLink="/albums/{{photo.albumId}}">Back</button>
   <div>
     <img src="{{photo.thumbnailUrl}}"/>
     <p>Title: {{photo.title}}</p>

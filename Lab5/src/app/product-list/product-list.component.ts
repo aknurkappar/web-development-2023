@@ -16,7 +16,7 @@ export class ProductListComponent implements OnInit{
         "дизайн: для правой руки", "разрешение оптического сенсора : 16000 dpi"], 25585,5,
       "https://kaspi.kz/shop/p/logitech-g502-hero-chernyi-9101669/?c=750000000#!/item",
       ["logitech-g-g502-hero-black-1.jpeg", "logitech-g-g502-hero-black-2.jpeg", "logitech-g-g502-hero-black-3.jpeg", "logitech-g-g502-hero-black-4.jpeg"],
-      new Category("Mouses"), 231),
+      new Category("Mouses"), 1),
     new Product(
       "Мышь Logitech MX Master 3S 910-006559 черный",
       ["тип подключения: проводная", "тип сенсора: оптическая светодиодная",
@@ -24,7 +24,7 @@ export class ProductListComponent implements OnInit{
       58985, 5,
       "https://kaspi.kz/shop/p/logitech-mx-master-3s-910-006559-chernyi-106172365/?c=750000000#!/item",
       ["logitech-mx-master-1.jpeg", "logitech-mx-master-2.jpeg", "logitech-mx-master-3.jpeg", "logitech-mx-master-4.jpeg"],
-      new Category("Mouses"), 122
+      new Category("Mouses"), 9
     ),
     new Product(
       "Мышь Logitech Pebble M350 розовый",
@@ -33,7 +33,7 @@ export class ProductListComponent implements OnInit{
       9977, 5,
       "https://kaspi.kz/shop/p/logitech-pebble-m350-rozovyi-100370949/?c=750000000#!/item",
       ["logitech-pebble-rozovyj-1.jpeg", "logitech-pebble-rozovyj-2.jpeg", "logitech-pebble-rozovyj-3.jpeg"],
-      new Category("Mouses"), 223
+      new Category("Mouses"), 10
     ),
 
     new Product(
@@ -42,7 +42,7 @@ export class ProductListComponent implements OnInit{
       19480, 5,
       "https://kaspi.kz/shop/p/logitech-k380-920-007584-chernyi-9200752/?c=750000000#!/item",
       ["logitech-k380-wireless-cernyj-1.jpeg", "logitech-k380-wireless-cernyj-2.jpeg", "logitech-k380-wireless-cernyj-3.jpeg"],
-      new Category("Keyboards"), 300
+      new Category("Keyboards"), 12
     ),
 
     new Product(

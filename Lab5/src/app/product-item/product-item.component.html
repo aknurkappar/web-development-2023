@@ -1,4 +1,4 @@
-<div>
+<div *ngIf="product.like.counter < 10">
 <a class="link-icon" href="{{product.link}}" [title]="product.name + ' details'">
   {{product.name}}
   <img src="../../assets/link-icon.png" arc="link-icon">
@@ -14,9 +14,9 @@
 </ul>
 
 <div class="product-footer">
-  <p class="like-text">{{product.like.counter}}</p>
-  <button type="button" (click)="product.like.setLike()" [ngClass]="{'product-button-liked' : product.like.isLiked, 'product-button-not-liked' : !product.like.isLiked }"class="product-button-like"></button>
-  <div class="product-price">{{product.price}}₸</div>
+    <p class="like-text">{{product.like.counter}}</p>
+    <button type="button" (click)="product.like.setLike()" [ngClass]="{'product-button-liked' : product.like.isLiked, 'product-button-not-liked' : !product.like.isLiked }"class="product-button-like"></button>
+   <div class="product-price">{{product.price}}₸</div>
   <div class="product-buttons-box">
     <p>Share via</p>
     <button type="button" (click)="shareViaWhatsApp(product.link)" class="product-button-whatsapp"></button>
