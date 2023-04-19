@@ -1,1 +1,3 @@
-from .api_lab10 import company_list, company_detail, company_vacancies, VacancyList, VacancyDetails, VacanciesTopTen
+from .fbv import company_list, company_details, company_vacancies
+
+from .cbv import VacancyListAPIView, VacancyDetailsAPIView, VacanciesTopTenAPIView
