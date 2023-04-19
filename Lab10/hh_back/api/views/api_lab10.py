@@ -51,9 +51,8 @@ class VacancyList(View):
         serializer = VacancySerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            return JsonResponse(serializer.data)
-        return JsonResponse(serializer.errors)
-
+            return JsonResponse("New data is added!")
+        return JsonResponse("Error")
 
 
 class VacancyDetails(APIView):
@@ -65,18 +64,17 @@ class VacancyDetails(APIView):
         serializer = VacancySerializer(vacancy)
         return JsonResponse(serializer.data)
 
-
     def put(self, request, id):
         try:
             vacancy = Vacancy.objects.get(id=id)
-        except Vacancy.DoesNotExist as error:
+        except Vacancy.DoesNotExist:
             return JsonResponse({'message': "Vacancy is not found"}, status=400)
         serializer = VacancySerializer(vacancy, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return JsonResponse({'message': "Updated"})
         else:
-            return JsonResponse({'message': "Serializer is not validate"}, status=400)
+            return JsonResponse(serializer.errors, status=400)
 
 
     def delete(self, request, id):

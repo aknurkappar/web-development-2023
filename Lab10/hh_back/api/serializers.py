@@ -10,7 +10,6 @@ class CompanySerializer(serializers.ModelSerializer):
 
 
 class VacancySerializer(serializers.Serializer):
-    id = serializers.IntegerField()
     name = serializers.CharField()
     description = serializers.CharField()
     salary = serializers.FloatField()
@@ -18,7 +17,14 @@ class VacancySerializer(serializers.Serializer):
 
     def create(self, validated_data):
         company_data = validated_data.pop("company")
-        company = Company.objects.create(**company_data)
+        try:
+            company = Company.objects.get(name=company_data.get("name"))
+        except Company.DoesNotExist:
+            serializer = CompanySerializer(data=company_data)
+            if serializer.is_valid():
+                company = serializer.save()
+            else:
+                return serializer.errors
         return Vacancy.objects.create(company=company, **validated_data)
 
     def update(self, instance, validated_data):
@@ -26,9 +32,16 @@ class VacancySerializer(serializers.Serializer):
         instance.description = validated_data.get("description", instance.description)
         instance.salary = validated_data.get("salary", instance.salary)
         company_data = validated_data.get("company", {})
-        serializer = CompanySerializer(instance=instance.company, data=company_data)
-        if serializer.is_valid():
-            serializer.save()
+        try:
+            company = Company.objects.get(name=company_data.get("name"))
+        except Company.DoesNotExist:
+            serializer = CompanySerializer(data=company_data)
+            if serializer.is_valid():
+                company = serializer.save()
+            else:
+                return serializer.errors
+            # company = Company.objects.create(**company_data)
+            instance.company = company
         instance.save()
         return instance
 

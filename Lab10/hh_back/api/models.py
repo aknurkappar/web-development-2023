@@ -6,7 +6,7 @@ from django.db.models import ForeignKey
 
 
 class Company(models.Model):
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=255, unique=True)
     description = models.TextField(default="")
     city = models.CharField(max_length=255)
     address = models.TextField(default="")
