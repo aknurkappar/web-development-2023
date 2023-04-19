@@ -1,10 +1,9 @@
 from rest_framework import status
-from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from api.models import Vacancy, Company
-from api.serializers import VacancySerializer, CompanySerializer
+from api.serializers import VacancySerializer
 
 
 class VacanciesTopTenAPIView(APIView):

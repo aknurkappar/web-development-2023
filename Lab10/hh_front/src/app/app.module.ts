@@ -7,6 +7,9 @@ import { CompaniesComponent } from './companies/companies.component';
 import { CompanyDetailsComponent } from './company-details/company-details.component';
 import { VacanciesComponent } from './vacancies/vacancies.component';
 import { VacanyDetailsComponent } from './vacany-details/vacany-details.component';
+import {HttpClientModule} from "@angular/common/http";
+
+
 
 @NgModule({
   declarations: [
@@ -18,7 +21,8 @@ import { VacanyDetailsComponent } from './vacany-details/vacany-details.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

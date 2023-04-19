@@ -1,1 +1,9 @@
-<p>company-details works!</p>
+
+<div class="company">
+  <p class="company-name">{{company.name}}</p>
+  <p>{{company.description}}</p>
+  <p>{{company.city}}</p>
+  <p>{{company.address}}</p>
+
+  <a class="more-button" routerLink="/companies/{{company.id}}/vacancies"> Vacancies</a>
+</div>

@@ -1,1 +1,8 @@
-<p>vacancies works!</p>
+<div class="company-list">
+  <a class="company" *ngFor="let vacancy of vacancies">
+    <p class="company-name">{{vacancy.name}}</p>
+    <p>{{vacancy.description}}</p>
+    <p>{{vacancy.salary}}</p>
+    <p>Company : {{vacancy.company.name}}</p>
+  </a>
+</div>

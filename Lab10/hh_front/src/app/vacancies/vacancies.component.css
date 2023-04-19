@@ -1,0 +1,17 @@
+.company-list{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.company{
+  background: rgb(61, 81, 103);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.company-name{
+  font-size: 28px;
+}

@@ -1,12 +1,6 @@
 <div class="company-list">
-  <div class="company">
-    <p class="company-name">company name</p>
-    <p>company city</p>
-  </div>
-
-
-  <div class="company">
-    <p class="company-name">company name</p>
-    <p>company city</p>
-  </div>
+  <a class="company" *ngFor="let company of companies" routerLink="/companies/{{company.id}}">
+    <p class="company-name">{{company.name}}</p>
+    <p>{{company.city}}</p>
+  </a>
 </div>

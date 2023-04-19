@@ -1,0 +1,26 @@
+.company{
+  background: rgb(61, 81, 103);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 15px;
+  color: white;
+  padding-bottom: 60px;
+}
+
+.company-name{
+  font-size: 28px;
+}
+
+
+.more-button{
+  background: white;
+  color: black;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 15px;
+  position: relative;
+  top: 15px;
+  font-family: 'Montserrat', sans-serif;
+}
