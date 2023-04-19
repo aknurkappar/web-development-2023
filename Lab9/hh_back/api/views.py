@@ -45,3 +45,8 @@ def vacancies_top_ten(request):
     vacancies = Vacancy.objects.all().order_by('-salary')[:10]
     vacancies_json = [vacancy.to_json() for vacancy in vacancies]
     return JsonResponse(vacancies_json, safe=False)
+
+def vacancies_salary_more_than_200000(request):
+    vacancies = Vacancy.objects.filter(salary__gte=200000)
+    vacancies_json = [vacancy.to_json() for vacancy in vacancies]
+    return JsonResponse(vacancies_json, safe=False)
