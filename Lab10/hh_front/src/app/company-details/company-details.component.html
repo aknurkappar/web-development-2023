@@ -1,9 +1,27 @@
 
 <div class="company">
-  <p class="company-name">{{company.name}}</p>
-  <p>{{company.description}}</p>
-  <p>{{company.city}}</p>
-  <p>{{company.address}}</p>
+  <div>
+    <p class="company-name">{{company.name}}</p>
+    <p>{{company.description}}</p>
+    <p>{{company.city}}</p>
+    <p>{{company.address}}</p>
+  </div>
+  <div>
+    <a class="more-button" routerLink="/companies/{{company.id}}/vacancies"> Vacancies</a>
+    <img class="trash" src="./assets/icons/icon-trash-white.png" (click)="deleteCompany(company.id)"/>
+  </div>
 
-  <a class="more-button" routerLink="/companies/{{company.id}}/vacancies"> Vacancies</a>
+</div>
+
+<div>
+  <div class="edit">
+    <img src="./assets/icons/edit-icon-blue.png" width="30"/> <p>Update company information:</p>
+  </div>
+  <form #updateCompanyForm="ngForm" (ngSubmit)="updateCompany(updateCompanyForm.value, company.id)">
+    <input type="text" name="name" ngModel placeholder="Company name"/>
+    <textarea type="text" name="description" ngModel placeholder="Description"></textarea>
+    <input type="text" name="city" ngModel placeholder="City"/>
+    <input type="text" name="address" ngModel placeholder="Address"/>
+    <button type="submit">Save changes</button>
+  </form>
 </div>

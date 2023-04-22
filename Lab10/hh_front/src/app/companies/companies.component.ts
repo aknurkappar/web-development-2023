@@ -16,12 +16,19 @@ export class CompaniesComponent implements OnInit{
   ngOnInit(): void {
     this.companyServise.getCompanies().subscribe((data)=>{
       this.companies = data
-      console.log(this.companies)
     })
 
   }
+  createCompany(value : any){
+    var company = {} as Company
+    company.name = value.name
+    company.description = value.description
+    company.city = value.city
+    company.address = value.address
+    this.companyServise.crateCompany(company).subscribe((data)=>{
+      company = data
+    })
 
-  goToCompanyDetails(id : number){
-
+    window.location.reload()
   }
 }

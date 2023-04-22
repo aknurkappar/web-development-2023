@@ -1,3 +1,17 @@
+<div>
+  <div class="edit">
+    <img src="./assets/icons/edit-icon-blue.png" width="30"/> <p>Create new company:</p>
+  </div>
+  <form #createCompanyForm="ngForm" (ngSubmit)="createCompany(createCompanyForm.value)">
+    <input type="text" name="name" ngModel placeholder="Company name"/>
+    <textarea type="text" name="description" ngModel placeholder="Description"></textarea>
+    <input type="text" name="city" ngModel placeholder="City"/>
+    <input type="text" name="address" ngModel placeholder="Address"/>
+    <button type="submit">Create new company</button>
+  </form>
+</div>
+
+
 <div class="company-list">
   <a class="company" *ngFor="let company of companies" routerLink="/companies/{{company.id}}">
     <p class="company-name">{{company.name}}</p>

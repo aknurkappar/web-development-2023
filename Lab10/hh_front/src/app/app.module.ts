@@ -8,6 +8,7 @@ import { CompanyDetailsComponent } from './company-details/company-details.compo
 import { VacanciesComponent } from './vacancies/vacancies.component';
 import { VacanyDetailsComponent } from './vacany-details/vacany-details.component';
 import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -19,11 +20,12 @@ import {HttpClientModule} from "@angular/common/http";
     VacanciesComponent,
     VacanyDetailsComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

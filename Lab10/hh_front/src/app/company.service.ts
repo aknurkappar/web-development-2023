@@ -25,4 +25,15 @@ export class CompanyService {
   getCompanyVacancies(id: number): Observable<Vacancy[]> {
     return this.client.get<Vacancy[]>(`${this.BASE_URL}/companies/${id}/vacancies`)
   }
+
+  updateCompany(updatedCompany : Company, id : number) : Observable<Company>{
+    return this.client.put<Company>(`${this.BASE_URL}/companies/${id}/`, updatedCompany)
+  }
+
+  deleteCompany(id: number): Observable<Company> {
+    return this.client.delete<Company>(`${this.BASE_URL}/companies/${id}/`)
+  }
+  crateCompany(company : Company):  Observable<Company> {
+    return this.client.post<Company>(`${this.BASE_URL}/companies/`, company)
+  }
 }

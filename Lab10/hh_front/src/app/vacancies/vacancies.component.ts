@@ -1,31 +1,42 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Company, Vacancy} from "../models";
 import {ActivatedRoute} from "@angular/router";
 import {CompanyService} from "../company.service";
+import {VacancyService} from "../vacancy.service";
 
 @Component({
   selector: 'app-vacancies',
   templateUrl: './vacancies.component.html',
   styleUrls: ['./vacancies.component.css']
 })
-export class VacanciesComponent {
+export class VacanciesComponent implements OnInit {
 
   vacancies : Vacancy[] = []
 
-  constructor(private route : ActivatedRoute, private companyServise : CompanyService) {
-  }
+  constructor(private route : ActivatedRoute,
+              private companyService : CompanyService,
+              private vacancyService : VacancyService) {}
 
-  getCompany(){
+  getCompanyVacancies(){
     this.route.paramMap.subscribe(params => {
       const id = Number(params.get("id"))
-      this.companyServise.getCompanyVacancies(id).subscribe(data => {
+      this.companyService.getCompanyVacancies(id).subscribe(data => {
         this.vacancies = data
       })
     })
   }
 
+  getVacancies(){
+    this.vacancyService.getVacancies().subscribe(data => {
+      this.vacancies = data
+    })
+  }
+
   ngOnInit(): void {
-    this.getCompany()
+    if(window.location.href == "http://localhost:4200/vacancies")
+      this.getVacancies()
+    else
+      this.getCompanyVacancies()
   }
 
 }

@@ -15,3 +15,50 @@
 .company-name{
   font-size: 28px;
 }
+
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 30%;
+}
+
+input, textarea{
+  border: none;
+  background: rgb(61, 81, 103);
+  border-radius: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  color: white;
+}
+
+
+input::placeholder, textarea::placeholder{
+  color: rgba(255, 255, 255, 0.45);
+}
+
+textarea{
+  font-family: sans-serif;
+}
+
+button{
+  cursor: pointer;
+  color: rgb(61, 81, 103);
+  border: solid 2px rgb(61, 81, 103);
+  background: none;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.edit{
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.edit p{
+  margin-left: 10px;
+}

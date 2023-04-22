@@ -23,7 +23,7 @@ def company_list(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-@api_view(['GET', 'DELETE'])
+@api_view(['GET', 'DELETE', 'PUT'])
 def company_details(request, id):
     try:
         company = Company.objects.get(id=id)
@@ -36,6 +36,12 @@ def company_details(request, id):
     elif request.method == 'DELETE':
         company.delete()
         return Response({'deleted': True}, status=status.HTTP_200_OK)
+    elif request.method == 'PUT':
+        serializer = CompanySerializer(company, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(['GET'])
